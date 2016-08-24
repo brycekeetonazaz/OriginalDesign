@@ -30,20 +30,30 @@ void dude(boolean mouthOpen)
 	}
 	else if(mouthOpen == true)
 	{
-		if(dudeY>=150)
+		if(dudeYSpeed>0)
+		{
+			arc(dudeX,dudeY,25,25,3*PI/4,PI/4);
+		}
+		if(dudeYSpeed<0)
 		{
 			arc(dudeX,dudeY,25,25,PI/4,7*PI/4);
 		}
-		if(dudeY<=350)
+		if(dudeXSpeed>0)
 		{
-			arc(dudeX,dudeY,25,25,PI/1.5,PI/4);
+
+		}
+		if(dudeXSpeed<0)
+		{
+			
 		}
 		
 	}
 	if(dotOnScreen == true)
 	{
-		dudeX -= ((dudeX - dotX)/10);
-		dudeY -= ((dudeY - dotY)/10);
+		dudeXSpeed = ((dudeX - dotX)/10);
+		dudeYSpeed = ((dudeY - dotY)/10);
+		dudeX -= dudeXSpeed;
+		dudeY -= dudeYSpeed;
 		dot();
 	}
 	if(dudeX >= dotX-12 && dudeX <= dotX+12 && dudeY <= dotY+12 && dudeY >= dotY-12)

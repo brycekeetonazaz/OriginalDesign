@@ -32,7 +32,7 @@ void dude(boolean mouthOpen)
 	{
 		if(dudeYSpeed>0)
 		{
-			arc(dudeX,dudeY,25,25,3*PI/4,PI/4);
+			arc(dudeX,dudeY,25,25,PI/4,3*PI/5, PIE);
 		}
 		if(dudeYSpeed<0)
 		{
@@ -40,11 +40,11 @@ void dude(boolean mouthOpen)
 		}
 		if(dudeXSpeed>0)
 		{
-
+			arc(dudeX,dudeY,25,25,PI/4,7*PI/4);
 		}
 		if(dudeXSpeed<0)
 		{
-			
+			arc(dudeX,dudeY,25,25,PI/4,7*PI/4);
 		}
 		
 	}
@@ -59,6 +59,8 @@ void dude(boolean mouthOpen)
 	if(dudeX >= dotX-12 && dudeX <= dotX+12 && dudeY <= dotY+12 && dudeY >= dotY-12)
 	{
 		dotOnScreen = false;
+		mouthOpen = false;
+		ellipse(dudeX,dudeY,25,25);
 	}
 }
 void dot()

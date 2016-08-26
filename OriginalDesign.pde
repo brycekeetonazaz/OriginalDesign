@@ -32,7 +32,7 @@ void dude(boolean mouthOpen)
 	{
 		if(dudeYSpeed>0)
 		{
-			arc(dudeX,dudeY,25,25,PI/4,3*PI/5, PIE);
+			arc(dudeX,dudeY,25,25,PI/4,7*PI/4);
 		}
 		if(dudeYSpeed<0)
 		{
